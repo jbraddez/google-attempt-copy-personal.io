@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="website icon" type="webp" href="./images/google-logo.webp">
+    
+</head>
+<body>
+    <div id="header-elements">
+        <div id="left-head">
+            <a class="text" id="about" href="https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header">About</a>
+            <a class="text" id-="store" href="https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB">Store</a>
+        </div>
+        <div id="right-head">
+            <a class="text righthead-text" id="gmail" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Gmail</a>
+            <a class="text righthead-text" id="images" href="https://images.google.com/?tab=ri&ogbl#">Images</a>
+            <!-- MORE + PROFILE TO GO HERE -->
+
+        </div>
+        <a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.co.uk/&ec=GBRAmgQ"><img id="profile" src="https://lh3.googleusercontent.com/fife/ALs6j_HXeT7dx1QkUXX1gBpEa---ALxQd5udhuAmtKx0MDkP07VACN4l1klkeB8TM5ywjSjc6M-o-lxG86fh7MjLm-fg8wUwTYWnCxppUhBDRoCQIvO5Xji3GiMH5epVdDqPbgUWCLOL0LgU5C7ojcuK-0jSbUsUofT4ZXCRwRAWI0t9y1yq5PZYgKF34FxQ16S5VshLeMd76SGDJJjXy6Ak-ZmrO64w41GpA0yTMfOJtwd0dcEyR2sGzgQsvIVbQfW-jFsW4azBID28zeTpSF8795H6Y2HImzw05P64kl5RCu4nwOygSTWBg29vKhKO_PIlkABEkVYeZPVAr_yd1mK9TqCecGQken7Vgb0loMfI99RWItKYYBoC9ZiLNr6UQWkrzJ4QB6eaXkqrif1MYyWu25lLcK-pFuANGFESsM8sWcgK5eXB944XMl6m6xX6ZB09JmltGzsSL5fDkZBeKwS7irdMxx61C64OitygSsWsKDmjjDsgoM76rKxZmKHthu7vF25sfImy6Wrt7Q_-S4YjdLVOry3uG9dg9t-K1JoyU9Ke5ZtAGZwLHPSWjf6HMU7tJuJNU0mBP3AeiSBIEqnwrRdohMBlMobOyWVMo5Dh0bI7E2uA0iFrhU9sFUuzCHD0YMRwI8qTHdwNLIbW6-aShKqdYIQFpBjmsr28zD8wKQ-InmJEXVpKIRHAD_fEuav6DTXxRWiMQQ2_NFwTmf4xsl6NtZzeOlTbIjWnYXo8iQxxNSqXya8CaBuvyKCxxU4giyUccgWfxv9_nPprKiEEAjgvxVfaiK63zYaQ7dJWbGY5vb-GEDg6dbsFGsYyQ383uJ6LJ6MdK_lGfjMuo9_Y9f8Pl7A_VANy3wWCoe0-OlyXJgHeq8M1_pWWUbQEqDZVNhi8PxGOwvbO0uz8c3FkWlfL4rIpZF-Ule_BTkwL9RX0JNX4osxgKUMWPjC70bEru1LsxWYgt4uV9xEeM61TeCki2APPej-jAwUAdf-Y8zaWfWay3kr7HulBxJvIRytAkfoMmz0myLeahBiTU8gS9HzxdAj2pPFqJNmEYSLJOQfEH5TVg241s6X5JetSjOZt3hxciHVKRMZX--cdw7pmNWy8YkDB0xCYankQIgcFsnlTnaSmF4fjVWf0R-ty-tfqfN1JKnDfE8SqR5cVvRHc5tra0q-vFQ8-UWJddVpggR0Vp2XKNnsOsSMsC_jLsTywTY-gfLMZP0OrtoDCJkB_3G77CAt2bD5j6zt0UwJT6onAszebhgfdn5fUzWrGbyOqkEV99-Lq2QyJbs4jWT5pI0_es4ANFds1OvnzXuoVC8U27iA-Vi85r3mqgOw0igjxkRqtHrnVLZZr5y-MWeshzLKK3hHh53UD6D8RqOtLMRqdU9T2W6cVG6kVWnQVGYBJlSAi=s32-c"> </a>
+    </div>
+
+    <div id="search-area">
+        <a id="logo" href="index.html" target="_self"><img src="https://www.google.co.uk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></a>
+
+        <!-- SEARCH BAR + REST -->
+        <input rows="1"  maxlength="256" type="text" id="search-bar">
+
+        <div id="search-boxes">
+            <button class="search-box">Google Search</button>
+            <button onclick="openRandomWebsite();" id="search-lucky" class="search-box">I'm Feeling Lucky</button>
+        </div>
+    </div>
+
+    <script>
+        function ChangeBarWidth() {
+            var screenWidth = window.innerWidth;
+            var sbar = document.getElementById('search-bar'); // Moved declaration here
+            if (screenWidth > 850) {
+                console.log('bigger');
+                sbar.style.width = '600px';
+            } else {
+                console.log('smaller');
+                var newWidth = screenWidth * 0.7 + 'px';
+                sbar.style.width = newWidth; // Removed !important
+            }
+        }
+        
+        ChangeBarWidth();
+        
+        // Add event listeners without calling the function
+        window.addEventListener('resize', ChangeBarWidth);
+        window.addEventListener('load', ChangeBarWidth);
+        </script>
+
+        <script>
+            document.getElementById('search-bar').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    this.value = ''; // Clear the input value
+                }
+            });
+        </script>
+
+<script>
+    var websitelist = [
+            'https://www.nytimes.com/',
+            'https://en.wikipedia.org/wiki/Special:Random',
+            'https://en.wikipedia.org/wiki/Special:Random',
+            'https://en.wikipedia.org/wiki/Special:Random',
+            'https://www.reddit.com/r/random/',
+            'https://www.theonion.com/',
+            'https://random.dog/',
+            'https://www.bbc.co.uk/news/random',
+            'https://www.bbc.co.uk/news',
+            'https://random.cat/',
+            'https://www.theguardian.com/uk'
+        ];
+
+
+        function openRandomWebsite() {
+            var i = Math.floor(Math.random() * websitelist.length);
+            window.open(websitelist[i], '_blank');
+        }
+
+</script>
+
+        
+
+    </body>
+</html>
